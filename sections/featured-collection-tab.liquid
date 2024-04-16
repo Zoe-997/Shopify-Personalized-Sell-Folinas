@@ -51,7 +51,7 @@
 -%}
 
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
-  <div class="collection{% if section.settings.layout == 'grid' %} page-width{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
+  <div class="collection{% if section.settings.layout == 'grid' %} page-width{% endif %} section-{{ section.id }}-padding">
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
       {%- if section.settings.title != blank -%}
         <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -79,13 +79,13 @@
           {%- for block in tabs -%}
             {%- assign coll_name = collections[block.settings.collection].title   -%}
             <li {% if section.blocks.size > 1 %}{% if forloop.index == 1 %} class="active"{% endif %}{% endif %} data-collection="{{ collections[block.settings.collection].handle }}">
-                <sapn>
+                <span>
                   {% if block.settings.title != blank %}
                     <span>{{ block.settings.title}}</span>
                   {% else %}
                     <span> {% if coll_name !=blank %}{{ coll_name }}{% else %}Tab Title {{ index }}{% endif %}</span>
                   {% endif %}
-                </sapn>
+                </span>
             </li>
             {% assign index = index | plus: 1 %}
           {%- endfor -%}
@@ -93,13 +93,14 @@
       </div>
     {% endif %}
 
-    <slider-component class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-      {%- for block in tabs limit: 1 -%}
+    <slider-component class="collection__tabs--content slider-mobile-gutter{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {%- for block in tabs limit: tabs.size -%}
         <ul
           id="Slider-{{ section.id }}"
-          class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}"
+          class="{% if section.blocks.size > 1 %}{% if forloop.index == 1 %}active {% endif %}{% endif %}grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}"
           role="list"
           aria-label="{{ 'general.slider.name' | t }}"
+          data-collection="{{ collections[block.settings.collection].handle }}"
         >
         {% if block.settings.collection != blank %}
           {%- assign products = collections[block.settings.collection].products -%}
@@ -199,8 +200,17 @@
 </div>
 
 {%- javascript -%}
-  const selectorTabs = document.querySelector('collection-tabs-{{ section.id }}');
-  console.log('tabs', selectorTabs);
+  const selectorTabs = document.querySelector('.collection__tabs');
+  const selectorTabsContent = document.querySelector('.collection__tabs--content ul');
+  const tabItems = selectorTabs.getElementsByTagName("li");
+
+  for (var i = 0; i < tabItems.length; i++) {
+    tabItems[i].addEventListener("click", function() {
+      const current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace("active", "");
+      this.className += "active";
+    });
+  }
 {%- endjavascript -%}
 
 {% schema %}
@@ -307,12 +317,6 @@
       "step": 1,
       "default": 4,
       "label": "t:sections.featured-collection.settings.columns_desktop.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "full_width",
-      "label": "t:sections.featured-collection.settings.full_width.label",
-      "default": false
     },
     {
       "type": "checkbox",
