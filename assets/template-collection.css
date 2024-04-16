@@ -97,3 +97,30 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
+
+/* collection tab */
+@media screen and (min-width: 768px) {
+  .collection__tabs ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    gap: 1.5rem;
+  }
+  
+  .collection__tabs ul li {
+    flex: 1;
+    text-align: center;
+  }
+
+  .collection__tabs ul li >* {
+    color: rgb(var(--color-foreground));
+    text-decoration: none;
+    padding: 1.3rem;
+    background-color: rgba(var(--color-button), var(--alpha-button-background));
+    color: rgb(var(--color-button-text));
+    display: block;
+    border-radius: 1.4rem;
+    cursor: pointer;
+  }
+}

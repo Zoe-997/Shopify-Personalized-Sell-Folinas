@@ -867,6 +867,7 @@ summary::-webkit-details-marker {
 
 .title-wrapper--no-top-margin > .title {
   margin-top: 0;
+  text-align: center;
 }
 
 .subtitle {
@@ -1138,7 +1139,7 @@ summary::-webkit-details-marker {
 }
 
 .media > img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
   transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -1248,6 +1249,9 @@ button.shopify-payment-button__button--unbranded {
   -webkit-appearance: none;
   appearance: none;
   background-color: rgba(var(--color-button), var(--alpha-button-background));
+  border-radius: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .button:before,
@@ -1266,6 +1270,7 @@ button.shopify-payment-button__button--unbranded {
   border-radius: var(--buttons-radius-outset);
   box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
     rgba(var(--color-shadow), var(--shadow-opacity));
+    border-radius: 30px;
 }
 
 .button:after,
@@ -1284,6 +1289,7 @@ button.shopify-payment-button__button--unbranded {
       rgba(var(--color-button-text), var(--border-opacity)),
     0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
   transition: box-shadow var(--duration-short) ease;
+  border-radius: 30px;
 }
 
 .button:not([disabled]):hover::after,
@@ -2432,7 +2438,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
   }
 
   .header:not(.header--middle-left, .header--middle-center) .header__inline-menu {
-    margin-top: 1.05rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -2804,6 +2810,7 @@ details[open] > .header__submenu {
   padding: 1.2rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
+  font-weight: 700;
 }
 
 .header__menu-item:hover {
@@ -2812,6 +2819,7 @@ details[open] > .header__submenu {
 
 .header__menu-item span {
   transition: text-decoration var(--duration-short) ease;
+  letter-spacing: 1px;
 }
 
 .header__menu-item:hover span {
@@ -2834,8 +2842,7 @@ details[open] > .header__menu-item .icon-caret {
 .header__active-menu-item {
   transition: text-decoration-thickness var(--duration-short) ease;
   color: rgb(var(--color-foreground));
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  font-weight: 900;
 }
 
 .header__menu-item:hover .header__active-menu-item {

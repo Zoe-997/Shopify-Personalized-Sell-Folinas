@@ -2,14 +2,14 @@
   "current": {
     "logo": "shopify:\/\/shop_images\/macorner-vector-logo.svg",
     "logo_width": 220,
-    "type_header_font": "poppins_n4",
-    "heading_scale": 130,
-    "type_body_font": "poppins_n4",
+    "type_header_font": "nunito_sans_n7",
+    "heading_scale": 125,
+    "type_body_font": "nunito_sans_n4",
     "body_scale": 100,
     "page_width": 1200,
     "spacing_sections": 36,
-    "spacing_grid_horizontal": 40,
-    "spacing_grid_vertical": 40,
+    "spacing_grid_horizontal": 20,
+    "spacing_grid_vertical": 20,
     "animations_reveal_on_scroll": true,
     "animations_hover_elements": "none",
     "buttons_border_thickness": 1,
@@ -33,9 +33,9 @@
     "inputs_shadow_horizontal_offset": 0,
     "inputs_shadow_vertical_offset": 4,
     "inputs_shadow_blur": 5,
-    "card_style": "card",
+    "card_style": "standard",
     "card_image_padding": 0,
-    "card_text_alignment": "center",
+    "card_text_alignment": "left",
     "card_color_scheme": "scheme-1",
     "card_border_thickness": 0,
     "card_border_opacity": 10,
@@ -138,11 +138,11 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#fdfbf7",
-          "background_gradient": "linear-gradient(180deg, rgba(240, 244, 236, 1), rgba(241, 235, 226, 1) 100%)",
+          "background": "#ffffff",
+          "background_gradient": "",
           "text": "#2e2a39",
           "button": "#9b046f",
-          "button_label": "#fdfbf7",
+          "button_label": "#ffffff",
           "secondary_button_label": "#2e2a39",
           "shadow": "#2e2a39"
         }
@@ -189,6 +189,17 @@
           "button_label": "#5e3653",
           "secondary_button_label": "#fdfbf7",
           "shadow": "#2e2a39"
+        }
+      },
+      "scheme-7f000701-9932-4159-aeb3-44f2cf78624f": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#ffffff"
         }
       }
     }

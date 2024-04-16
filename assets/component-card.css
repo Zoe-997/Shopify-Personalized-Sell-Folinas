@@ -162,8 +162,7 @@
 
 @media screen and (min-width: 750px) {
   .card__information {
-    padding-bottom: 1.7rem;
-    padding-top: 1.7rem;
+    padding: 1rem 0;
   }
 }
 
@@ -200,6 +199,16 @@
 .card__heading {
   margin-top: 0;
   margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 16px;
+  margin-bottom: 7px;
+  margin-top: 10px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
 .card__heading:last-child {
@@ -296,11 +305,6 @@
     opacity: 1;
     transition: transform var(--duration-long) ease;
     transform: scale(1.03);
-  }
-
-  .underline-links-hover:hover a {
-    text-decoration: underline;
-    text-underline-offset: 0.3rem;
   }
 }
 
