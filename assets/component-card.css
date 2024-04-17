@@ -204,11 +204,12 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  font-size: 16px;
+  font-size: 2.7rem;
   margin-bottom: 7px;
-  margin-top: 10px;
-  line-height: 24px;
-  font-weight: 400;
+  margin-top: 0;
+  line-height: 2.7rem;
+  font-weight: 500;
+  letter-spacing: 0.6px;
 }
 
 .card__heading:last-child {

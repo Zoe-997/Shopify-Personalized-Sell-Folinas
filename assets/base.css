@@ -824,7 +824,7 @@ summary::-webkit-details-marker {
 @media screen and (min-width: 990px) {
   .title,
   .title-wrapper-with-link {
-    margin: 5rem 0 3rem;
+    margin: 5rem 0 5rem;
   }
 
   .title--primary {
@@ -1693,6 +1693,18 @@ details[open] > .share-button__fallback {
   display: flex;
   position: relative;
   width: 100%;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: end;
 }
 
 /* Select */

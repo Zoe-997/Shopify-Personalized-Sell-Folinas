@@ -28,11 +28,3 @@
   width: 10rem;
   padding: 0.5rem;
 }
-
-.collection__tabs--content .product-grid {
-  display: none;
-}
-
-.collection__tabs--content .product-grid.active {
-  display: flex;
-}

@@ -39,7 +39,8 @@
           "options__3": {
             "label": "Right"
           },
-          "label": "Text alignment"
+          "label": "Text alignment",
+          "label_1": "Heading alignment"
         }
       }
     },
@@ -395,6 +396,11 @@
         "padding_top": "Top padding",
         "padding_bottom": "Bottom padding"
       },
+      "margin": {
+        "section_margin_heading": "Section margin",
+        "margin_top": "Top margin",
+        "margin_bottom": "Bottom margin"
+      },
       "spacing": "Spacing",
       "colors": {
         "label": "Color scheme",
@@ -677,6 +683,22 @@
       },
       "presets": {
         "name": "Custom Liquid"
+      }
+    },
+    "driver": {
+      "name": "Driver",
+      "height": "Height",
+      "style": {
+        "label": "Style",
+        "options": {
+          "item_1": "Dotted",
+          "item_2": "Dashed",
+          "item_3": "Solid",
+          "item_4": "Double"
+        }
+      },
+      "presets": {
+        "name": "Driver"
       }
     },
     "featured-blog": {

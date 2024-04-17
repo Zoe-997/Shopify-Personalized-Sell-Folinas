@@ -132,3 +132,11 @@
     color: rgb(var(--color-button-text));
   }
 }
+
+.collection__tabs--content slider-component {
+  display: none;
+}
+
+.collection__tabs--content slider-component.active {
+  display: block;
+}
