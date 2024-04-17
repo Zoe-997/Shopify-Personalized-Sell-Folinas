@@ -40,19 +40,14 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "brand_information_bWRgJn": {
-          "type": "brand_information",
-          "disabled": true,
-          "settings": {
-            "show_social": true
-          }
-        },
         "image_dQcV94": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/logo-pertionalized-sell.png",
-            "image_width": 100,
-            "alignment": "center"
+            "image_width": 200,
+            "alignment": "",
+            "extra_info": "<p><strong>GET IN TOUCH!<\/strong><\/p><p><a href=\"https:\/\/macorner.co\/pages\/contact-us\" title=\"Contact us\"><strong>Contact us now!<\/strong><\/a><\/p><p><strong>Support time:<\/strong> Mon–Sat: 9AM-5PM<\/p>",
+            "show_social": true
           }
         },
         "link_list_cAMy7N": {
@@ -78,7 +73,6 @@
         }
       },
       "block_order": [
-        "brand_information_bWRgJn",
         "image_dQcV94",
         "link_list_cAMy7N",
         "link_list_EfNJBd",
@@ -92,10 +86,11 @@
         "show_social": true,
         "enable_country_selector": true,
         "enable_language_selector": true,
-        "payment_enable": false,
+        "payment_enable": true,
+        "payment_image": "shopify:\/\/shop_images\/payment.png",
         "show_policy": false,
         "margin_top": 0,
-        "padding_top": 20,
+        "padding_top": 40,
         "padding_bottom": 20
       }
     }

@@ -1064,7 +1064,8 @@
           "content": "Payment methods"
         },
         "payment_enable": {
-          "label": "Show payment icons"
+          "label": "Show payment icons",
+          "image": "Payment image"
         },
         "header__8": {
           "content": "Policy links",
