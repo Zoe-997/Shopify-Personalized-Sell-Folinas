@@ -15,6 +15,11 @@
           "settings": {
           }
         },
+        "mag_product_review_star_Jxynxx": {
+          "type": "shopify:\/\/apps\/mag-product-review\/blocks\/star\/0cf5caa0-e138-46b8-999b-520d16633e4c",
+          "settings": {
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -54,6 +59,7 @@
       "block_order": [
         "vendor",
         "title",
+        "mag_product_review_star_Jxynxx",
         "price",
         "variant_picker",
         "quantity_selector",
@@ -77,6 +83,46 @@
         "padding_bottom": 24
       }
     },
+    "1713344167c222ecc0": {
+      "type": "apps",
+      "blocks": {
+        "mag_product_review_all_reviews_rnN644": {
+          "type": "shopify:\/\/apps\/mag-product-review\/blocks\/allReviews\/0cf5caa0-e138-46b8-999b-520d16633e4c",
+          "settings": {
+          }
+        },
+        "mag_product_review_form_g9nEtn": {
+          "type": "shopify:\/\/apps\/mag-product-review\/blocks\/form\/0cf5caa0-e138-46b8-999b-520d16633e4c",
+          "settings": {
+            "block_heading": "",
+            "rating": "",
+            "no_rating": "",
+            "subtitle1": "",
+            "subtitle2": "",
+            "review_btn": "",
+            "form_heading": "",
+            "name_label": "",
+            "email_label": "",
+            "review_title_label": "",
+            "review_description_label": "",
+            "ratings_label": "",
+            "review_image_label": "",
+            "submit_btn_label": "",
+            "sort_label": "",
+            "sort1_label": "",
+            "sort2_label": "",
+            "sort3_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "mag_product_review_all_reviews_rnN644",
+        "mag_product_review_form_g9nEtn"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -98,6 +144,7 @@
   },
   "order": [
     "main",
+    "1713344167c222ecc0",
     "related-products"
   ]
 }
