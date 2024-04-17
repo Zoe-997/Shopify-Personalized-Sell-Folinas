@@ -214,6 +214,7 @@
 .shopify-payment-button__button {
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
+  border-radius: 30px !important;
 }
 
 /* Product info */
@@ -267,12 +268,26 @@ a.product__text {
   margin-top: 0;
 }
 
+.product__accordion summary svg {
+  transition: all ease .3s;
+}
+
+.product__accordion detail[open] summary svg{
+  transform: rotate(180deg);
+}
+
+.product__accordion detail[open] .accordion__content {
+  display: block;
+}
+
 .product__accordion .accordion__content {
   padding: 0 1rem;
+  display: none;
 }
 
 .product .price .badge {
   margin-bottom: 0.5rem;
+  margin-left: 0.5rem
 }
 
 .product .price__container {
