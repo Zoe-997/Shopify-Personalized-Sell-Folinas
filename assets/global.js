@@ -70,6 +70,25 @@ function trapFocus(container, elementToFocus = container) {
   }
 }
 
+function actionTabs(id) {
+  const divElement = document.getElementById(id);
+  const tabMenu = divElement.querySelector(".collection__tabs").querySelectorAll(".collection__tabs-title");
+
+  tabMenu.forEach(tab => {
+    tab.addEventListener("click", function() {
+      tabMenu.forEach(menu => {
+        menu.classList.remove("active");
+      });
+      this.classList.add("active");
+
+      const slugCollection = this.getAttribute("data-collection");
+      const parentCollection = this.closest(".section-collection-tabs");
+      parentCollection.querySelector(".featured-collection-product.active").classList.remove("active");
+      parentCollection.querySelector(`.featured-collection-product[data-collection="${slugCollection}"]`).classList.add("active");
+    });
+  });
+}
+
 // Here run the querySelector to figure out if the browser supports :focus-visible or not and run code based on it.
 try {
   document.querySelector(':focus-visible');
