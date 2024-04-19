@@ -187,8 +187,8 @@
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
                   <div class="product__accordion accordion quick-add-hidden">
-                    <detail id="Details-{{ section.id }}">
-                      <summary role="button" aria-expanded="false" aria-controls="ProductAccordion-{{ section.id }}">
+                    <details id="Details-{{ section.id }}">
+                      <summary role="button" aria-expanded="false">
                         <div class="summary__title">
                           <h2 class="h4 accordion__title inline-richtext">Description</h2>
                         </div>
@@ -199,7 +199,7 @@
                       <div class="accordion__content rte" {{ block.shopify_attributes }} id="ProductAccordion-{{ section.id }}">
                         {{ product.description }}
                       </div>
-                    </detail>
+                    </details>
                   </div>
                 {%- endif -%}
               {%- when 'sku' -%}
@@ -784,21 +784,6 @@
     </script>
   </div>
 </section>
-
-{%- javascript -%}
-  const productAccordion = document.querySelector('.product__accordion summary');
-  productAccordion.addEventListener("click", (event) => {
-    const isExpanded = event.currentTarget.getAttribute('aria-expanded');
-    const parentElement = event.currentTarget.parentNode;
-    if (isExpanded === "false") {
-      event.currentTarget.setAttribute('aria-expanded', 'true');
-      parentElement.setAttribute('open', '');
-    } else {
-      event.currentTarget.setAttribute('aria-expanded', 'false');
-      parentElement.removeAttribute('open');
-    }
-  });
-{%- endjavascript -%}
 
 {% schema %}
 {

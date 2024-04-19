@@ -273,17 +273,8 @@ a.product__text {
   transition: all ease .3s;
 }
 
-.product__accordion detail[open] summary svg{
-  transform: rotate(180deg);
-}
-
-.product__accordion detail[open] .accordion__content {
-  display: block;
-}
-
 .product__accordion .accordion__content {
   padding: 0 1rem;
-  display: none;
 }
 
 .product .price .badge {

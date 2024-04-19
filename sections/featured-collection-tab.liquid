@@ -33,7 +33,7 @@
 -%}
 
 <div class="color-{{ section.settings.color_scheme }} isolate gradient" id="collection-tab-{{ section.id }}">
-  <div class="collection{% if section.settings.layout == 'grid' %} page-width{% endif %} section-{{ section.id }}-padding">
+  <div class="collection section-collection-tabs{% if section.settings.layout == 'grid' %} page-width{% endif %} section-{{ section.id }}-padding">
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width">
       {%- if section.settings.title != blank -%}
         <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -60,7 +60,7 @@
           {% assign index = 1 %}
           {%- for block in tabs -%}
             {%- assign coll_name = collections[block.settings.collection].title   -%}
-            <li {% if section.blocks.size > 1 %}{% if forloop.index == 1 %} class="active"{% endif %}{% endif %} data-collection="{{ collections[block.settings.collection].handle }}">
+            <li class="collection__tabs-title{% if section.blocks.size > 1 %}{% if forloop.index == 1 %} active{% endif %}{% endif %}" data-collection="{{ collections[block.settings.collection].handle }}">
                 <span>
                   {% if block.settings.title != blank %}
                     <span>{{ block.settings.title}}</span>
@@ -97,7 +97,7 @@
           endif
         -%}
 
-        <slider-component class="{% if section.blocks.size > 1 %}{% if forloop.index == 1 %}active {% endif %}{% endif %}slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" data-collection="{{ collections[block.settings.collection].handle }}">
+        <slider-component class="{% if section.blocks.size > 1 %}{% if forloop.index == 1 %}active {% endif %}{% endif %}featured-collection-product slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" data-collection="{{ collections[block.settings.collection].handle }}">
             <ul
               id="Slider-{{ section.id }}"
               class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}"
@@ -202,32 +202,30 @@
       {% render 'mask-arch' %}
     {%- endif -%}
   </div>
-</div>
 
-{%- javascript -%}
-  const selectorTabs = document.querySelectorAll('.collection__tabs li');
-  const selectorTabsContent = document.querySelectorAll('.collection__tabs--content slider-component');
+  <script>
+    $(document).ready(function(){
+      // actionTabs("collection-tab-{{ section.id }}");
+      const divElement = document.getElementById("collection-tab-{{ section.id }}");
+      console.log('divElement: ', divElement);
+      const tabMenu = divElement.querySelector(".collection__tabs").querySelectorAll(".collection__tabs-title");
 
-  for (var i = 0; i < selectorTabs.length; i++) {
-    selectorTabs[i].addEventListener("click", function() {
-      const current = document.querySelector(".active");
-      const tabCollection = this.getAttribute("data-collection");
-      console.log('tabCollection: ', tabCollection);
-      current.classList.remove("active");
-      this.classList.add("active");
+      tabMenu.forEach(tab => {
+        tab.addEventListener("click", function() {
+          tabMenu.forEach(menu => {
+            menu.classList.remove("active");
+          });
+          this.classList.add("active");
 
-      selectorTabsContent.forEach(ul => {
-        console.log('ul', ul);
-        const contentCollection = ul.getAttribute('data-collection');
-        if (contentCollection === tabCollection) {
-          ul.classList.add("active");
-        } else {
-          ul.classList.remove("active");
-        }
+          const slugCollection = this.getAttribute("data-collection");
+          const parentCollection = this.closest(".section-collection-tabs");
+          parentCollection.querySelector(".featured-collection-product.active").classList.remove("active");
+          parentCollection.querySelector(`.featured-collection-product[data-collection="${slugCollection}"]`).classList.add("active");
+        });
       });
-    });
-  }
-{%- endjavascript -%}
+    })
+  </script>
+</div>
 
 {% schema %}
 {
