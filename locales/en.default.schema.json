@@ -448,6 +448,22 @@
         },
         "label": "Image shape",
         "info": "Standard-styled cards have no borders when an image shape is active."
+      },
+      "border": {
+        "style": {
+          "label": "Border style",
+          "items": {
+            "item_1": "None",
+            "item_2": "Solid",
+            "item_3": "Dashed",
+            "item_4": "Double",
+            "item_5": "Dotted"
+          }
+        },
+        "width": {
+          "label": "Border width"
+        },
+        "color": "Border color"
       }
     },
     "announcement-bar": {
@@ -1698,6 +1714,14 @@
             }
           }
         },
+        "collection": {
+          "name": "Collection",
+          "settings": {
+            "blog_show_collection": {
+              "label": "Show collection"
+            }
+          }
+        },
         "content": {
           "name": "Content"
         },
@@ -1760,6 +1784,17 @@
             "label": "Large"
           },
           "info": "For best results, use an image with a 3:2 aspect ratio. [Learn more](https:\/\/help.shopify.com\/manual\/shopify-admin\/productivity-tools\/image-editor#understanding-image-aspect-ratio)"
+        }
+      }
+    },
+    "collection-blog": {
+      "name": "Blog collection",
+      "settings": {
+        "collection": {
+          "label": "Collections"
+        },
+        "count": {
+          "enable": "Show count"
         }
       }
     },

@@ -1695,6 +1695,18 @@ details[open] > .share-button__fallback {
   width: 100%;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .justify-start {
   justify-content: start;
 }
@@ -1705,6 +1717,18 @@ details[open] > .share-button__fallback {
 
 .justify-end {
   justify-content: end;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
 }
 
 /* Select */

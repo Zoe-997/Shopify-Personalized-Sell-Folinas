@@ -44,7 +44,7 @@
 
       {%- when 'title' -%}
         <header
-          class="page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+          class="article-template-title text-center page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
           {{ block.shopify_attributes }}
         >
           <h1
@@ -82,6 +82,17 @@
           {% assign share_url = request.origin | append: article.url %}
           {% render 'share-button', block: block, share_link: share_url %}
         </div>
+      {%- when 'collection' -%}
+        {%- if block.settings.blog_show_date -%}
+          <div class="page-width article-collection flex flex-wrap justify-center items-center caption-with-letter-spacing">
+            <span>{{ 'blogs.article.blog' | t }}</span> |
+            <ul class="article-tag flex flex-wrap items-center">
+              {%- for tag in article.tags reversed limit: 5 -%}
+                <li class="tag-item">{{ tag }}</li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
     {%- endcase -%}
   {%- endfor -%}
 
@@ -391,6 +402,19 @@
         {
           "type": "paragraph",
           "content": "t:sections.main-article.blocks.share.settings.title_info.content"
+        }
+      ]
+    },
+    {
+      "type": "collection",
+      "name": "t:sections.main-article.blocks.collection.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "blog_show_date",
+          "default": true,
+          "label": "t:sections.main-article.blocks.collection.settings.blog_show_collection.label"
         }
       ]
     }

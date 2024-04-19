@@ -1,5 +1,9 @@
 
 {%- style -%}
+    .section + .section {
+        margin: 0
+    }
+
     .section-{{ section.id }}-padding {
       margin-top: calc({{ section.settings.margin_top }}px * 0.75);
       margin-bottom: calc({{ section.settings.margin_bottom }}px  * 0.75);
@@ -16,8 +20,8 @@
     }
 {%- endstyle -%}
 
-  <div class="color-{{ section.settings.color_scheme }} gradient">
-    <div class="section-{{ section.id }}-padding{% if section.settings.layout == 'grid' %} page-width{% endif %}">
+  <div class="color-{{ section.settings.color_scheme }} gradient{% if section.settings.layout == 'grid' %} page-width{% endif %}">
+    <div class="section-{{ section.id }}-padding">
       {{ section.settings.custom_liquid }}
     </div>
   </div>

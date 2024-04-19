@@ -1,12 +1,33 @@
 {
   "sections": {
+    "collection": {
+      "type": "blog-collection",
+      "settings": {
+        "layout": "full_bleed",
+        "collection_list": "collection-blog",
+        "show_count": false,
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
+    },
+    "driver": {
+      "type": "driver",
+      "settings": {
+        "layout": "grid",
+        "height": 1,
+        "style": "solid",
+        "color_scheme": "",
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
     "main": {
       "type": "main-article",
       "blocks": {
-        "featured_image": {
-          "type": "featured_image",
+        "collection_EtJ7wd": {
+          "type": "collection",
           "settings": {
-            "image_height": "large"
+            "blog_show_date": true
           }
         },
         "title": {
@@ -16,10 +37,10 @@
             "blog_show_author": false
           }
         },
-        "share": {
-          "type": "share",
+        "featured_image": {
+          "type": "featured_image",
           "settings": {
-            "share_label": "Share"
+            "image_height": "large"
           }
         },
         "content": {
@@ -29,9 +50,9 @@
         }
       },
       "block_order": [
-        "featured_image",
+        "collection_EtJ7wd",
         "title",
-        "share",
+        "featured_image",
         "content"
       ],
       "settings": {
@@ -39,6 +60,8 @@
     }
   },
   "order": [
+    "collection",
+    "driver",
     "main"
   ]
 }

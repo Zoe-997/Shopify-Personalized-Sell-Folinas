@@ -1,10 +1,29 @@
+.article-template .media {
+  background-color: transparent;
+}
+
 .article-template > *:first-child:not(.article-template__hero-container) {
   margin-top: 5rem;
 }
 
+.article-template .caption-with-letter-spacing {
+  font-size: 1.4rem;
+}
+
+.article-tag {
+  gap: var(--media-shadow-vertical-offset);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-collection {
+  gap: 10px;
+}
+
 @media screen and (min-width: 750px) {
   .article-template > *:first-child:not(.article-template__hero-container) {
-    margin-top: calc(5rem + var(--page-width-margin));
+    margin-top: calc(3rem + var(--page-width-margin));
   }
 }
 
@@ -61,7 +80,7 @@
 
 @media screen and (min-width: 750px) {
   .article-template header {
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 }
 
