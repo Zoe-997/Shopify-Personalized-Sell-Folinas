@@ -1,12 +1,42 @@
 {
   "sections": {
+    "rich_text_cJxRKC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LwmCJa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Personalized Sell | Custom Gifts & Decor",
+            "heading_size": "h2"
+          }
+        },
+        "text_BnrQpX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Makes your ideas a reality with unique, personalized gifts, home decor and fashion for any occasion! Customize your gifts today!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LwmCJa",
+        "text_BnrQpX"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "slideshow_LrDNCg": {
       "type": "slideshow",
       "blocks": {
         "slide_TfCrKT": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mother-day_s---banner.jpg",
+            "image": "shopify:\/\/shop_images\/banner_1.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -24,7 +54,7 @@
         "slide_WnaPw6": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Gift-for-Friends-edit-2.jpg",
+            "image": "shopify:\/\/shop_images\/2.png",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -53,6 +83,82 @@
         "image_behavior": "none",
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "collection_list_QYQdMq": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_xdjKkz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-bestie"
+          }
+        },
+        "featured_collection_tNzffK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-family"
+          }
+        },
+        "featured_collection_dNpL9B": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-kid"
+          }
+        },
+        "featured_collection_4FWrhU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-lover"
+          }
+        },
+        "featured_collection_9BTNGK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-mom"
+          }
+        },
+        "featured_collection_H8CbRX": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-pet-lover"
+          }
+        },
+        "featured_collection_Mtcn7k": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-sibling"
+          }
+        },
+        "featured_collection_3rdXy4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-dad"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_xdjKkz",
+        "featured_collection_tNzffK",
+        "featured_collection_dNpL9B",
+        "featured_collection_4FWrhU",
+        "featured_collection_9BTNGK",
+        "featured_collection_H8CbRX",
+        "featured_collection_Mtcn7k",
+        "featured_collection_3rdXy4"
+      ],
+      "settings": {
+        "title": "SHOP BY CATEGORY",
+        "heading_size": "h2",
+        "title_align": "center",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
     "featured-collection": {
@@ -87,7 +193,7 @@
       "type": "image-banner",
       "settings": {
         "layout": "grid",
-        "image": "shopify:\/\/shop_images\/4_4f35925d-b127-4814-9623-bf553ef78e39.webp",
+        "image": "shopify:\/\/shop_images\/1.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -167,7 +273,7 @@
       "type": "image-banner",
       "settings": {
         "layout": "grid",
-        "image": "shopify:\/\/shop_images\/Gifts-For-Friends-new_2000x_68a9543d-aea3-430c-bb9e-b3a057a0a8ce.jpg",
+        "image": "shopify:\/\/shop_images\/2.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -255,7 +361,7 @@
       "type": "image-banner",
       "settings": {
         "layout": "grid",
-        "image": "shopify:\/\/shop_images\/custom_photo_2000x_a27d29f5-8429-4abf-b6f5-cea6a350f154.jpg",
+        "image": "shopify:\/\/shop_images\/3.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -348,82 +454,6 @@
         "color_scheme": "",
         "margin_top": 40,
         "margin_bottom": 52
-      }
-    },
-    "collection_list_QYQdMq": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_xdjKkz": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "for-bestie"
-          }
-        },
-        "featured_collection_tNzffK": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "for-family"
-          }
-        },
-        "featured_collection_dNpL9B": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "for-kid"
-          }
-        },
-        "featured_collection_4FWrhU": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "for-lover"
-          }
-        },
-        "featured_collection_9BTNGK": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "for-mom"
-          }
-        },
-        "featured_collection_H8CbRX": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "for-pet-lover"
-          }
-        },
-        "featured_collection_Mtcn7k": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "for-sibling"
-          }
-        },
-        "featured_collection_3rdXy4": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "for-dad"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_xdjKkz",
-        "featured_collection_tNzffK",
-        "featured_collection_dNpL9B",
-        "featured_collection_4FWrhU",
-        "featured_collection_9BTNGK",
-        "featured_collection_H8CbRX",
-        "featured_collection_Mtcn7k",
-        "featured_collection_3rdXy4"
-      ],
-      "settings": {
-        "title": "SHOP BY RECIPIENT",
-        "heading_size": "h2",
-        "title_align": "center",
-        "image_ratio": "square",
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 36
       }
     },
     "driver_Tq7RKb": {
@@ -550,7 +580,9 @@
     }
   },
   "order": [
+    "rich_text_cJxRKC",
     "slideshow_LrDNCg",
+    "collection_list_QYQdMq",
     "featured-collection",
     "image_banner_TyiXc6",
     "featured_collection_tab_M7zWk8",
@@ -559,7 +591,6 @@
     "image_banner_gLDxAb",
     "featured_collection_tab_G8qAXz",
     "driver_dtU4a3",
-    "collection_list_QYQdMq",
     "driver_Tq7RKb",
     "collection_list_ViaMiM",
     "17133378045d3bb538"

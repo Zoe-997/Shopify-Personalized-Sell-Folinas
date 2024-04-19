@@ -32,7 +32,7 @@
   assign tabs = section.blocks | where: "type", "col"
 -%}
 
-<div class="color-{{ section.settings.color_scheme }} isolate gradient">
+<div class="color-{{ section.settings.color_scheme }} isolate gradient" id="collection-tab-{{ section.id }}">
   <div class="collection{% if section.settings.layout == 'grid' %} page-width{% endif %} section-{{ section.id }}-padding">
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width">
       {%- if section.settings.title != blank -%}
@@ -97,13 +97,12 @@
           endif
         -%}
 
-        <slider-component class="{% if section.blocks.size > 1 %}{% if forloop.index == 1 %}active {% endif %}{% endif %}slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <slider-component class="{% if section.blocks.size > 1 %}{% if forloop.index == 1 %}active {% endif %}{% endif %}slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" data-collection="{{ collections[block.settings.collection].handle }}">
             <ul
               id="Slider-{{ section.id }}"
               class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}"
               role="list"
               aria-label="{{ 'general.slider.name' | t }}"
-              data-collection="{{ collections[block.settings.collection].handle }}"
             >
             {% if block.settings.collection != blank %}
               {%- assign products = collections[block.settings.collection].products -%}
@@ -206,15 +205,26 @@
 </div>
 
 {%- javascript -%}
-  const selectorTabs = document.querySelector('.collection__tabs');
-  const selectorTabsContent = document.querySelector('.collection__tabs--content ul');
-  const tabItems = selectorTabs.getElementsByTagName("li");
+  const selectorTabs = document.querySelectorAll('.collection__tabs li');
+  const selectorTabsContent = document.querySelectorAll('.collection__tabs--content slider-component');
 
-  for (var i = 0; i < tabItems.length; i++) {
-    tabItems[i].addEventListener("click", function() {
-      const current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace("active", "");
-      this.className += "active";
+  for (var i = 0; i < selectorTabs.length; i++) {
+    selectorTabs[i].addEventListener("click", function() {
+      const current = document.querySelector(".active");
+      const tabCollection = this.getAttribute("data-collection");
+      console.log('tabCollection: ', tabCollection);
+      current.classList.remove("active");
+      this.classList.add("active");
+
+      selectorTabsContent.forEach(ul => {
+        console.log('ul', ul);
+        const contentCollection = ul.getAttribute('data-collection');
+        if (contentCollection === tabCollection) {
+          ul.classList.add("active");
+        } else {
+          ul.classList.remove("active");
+        }
+      });
     });
   }
 {%- endjavascript -%}
