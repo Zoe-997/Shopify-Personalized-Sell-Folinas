@@ -456,6 +456,14 @@ table:not([class]) th {
   }
 }
 
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
 .left {
   text-align: left;
 }
@@ -1727,8 +1735,20 @@ details[open] > .share-button__fallback {
   flex-wrap: wrap;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-baseline {
+  align-items: baseline;
 }
 
 /* Select */

@@ -117,8 +117,12 @@
     </small>
   </div>
   {%- if show_badges -%}
+    {%- liquid
+      assign persentSale = compare_at_price | minus: price | times: 100 | divided_by: compare_at_price
+    -%}
     <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
-      {{ 'products.product.on_sale' | t }}
+      {% comment %} {{ 'products.product.on_sale' | t }} {% endcomment %}
+      -{{ persentSale  }}%
     </span>
 
     <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">

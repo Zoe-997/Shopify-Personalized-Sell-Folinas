@@ -332,6 +332,10 @@ slider-component.slider-component-full-width {
   justify-content: center;
 }
 
+.slideshow__controls--none {
+  display: none;
+}
+
 @media screen and (min-width: 990px) {
   .slider:not(.slider--everywhere):not(.slider--desktop) + .slider-buttons {
     display: none;

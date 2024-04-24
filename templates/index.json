@@ -85,6 +85,138 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "multicolumn_6gHgxX": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_AztC6f": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icons8-around-the-globe-48_1600x_b199debc-4a24-4b2c-961b-218e3b32942d.png",
+            "title": "Offer Worldwide Shipping",
+            "text": "",
+            "link_label": "Learn more",
+            "link": "#"
+          }
+        },
+        "column_xWCeJD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icons8-guarantee-48_200x_88ee285d-3512-4368-937a-53c951511789.png",
+            "title": "One-Year Limited Warrant",
+            "text": "",
+            "link_label": "Learn more",
+            "link": "#"
+          }
+        },
+        "column_KjtiPB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icons8-bank-48_1600x_72118e69-a5de-4b3f-9718-a30347483b9a.png",
+            "title": "100% Secure Payment, Ensured",
+            "text": "",
+            "link_label": "Learn more",
+            "link": "#"
+          }
+        },
+        "column_UMr8QW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icons8-technical-support-48_1600x_928b838d-0bf8-44bc-83a6-661618712612.png",
+            "title": "24\/7 Dedicated Support",
+            "text": "",
+            "link_label": "Submit a request",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        }
+      },
+      "block_order": [
+        "column_AztC6f",
+        "column_xWCeJD",
+        "column_KjtiPB",
+        "column_UMr8QW"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "title_align": "center",
+        "image_width": "small",
+        "image_ratio": "circle",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_carousel_CTDYJx": {
+      "type": "collection-carousel",
+      "blocks": {
+        "featured_collection_A3BRVE": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-bestie"
+          }
+        },
+        "featured_collection_VF79Cp": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-dad"
+          }
+        },
+        "featured_collection_tEKRnq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-mom"
+          }
+        },
+        "featured_collection_kY7mEW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-family"
+          }
+        },
+        "featured_collection_4BkJmf": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-sibling"
+          }
+        },
+        "featured_collection_DDAaHk": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-lover"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_A3BRVE",
+        "featured_collection_VF79Cp",
+        "featured_collection_tEKRnq",
+        "featured_collection_kY7mEW",
+        "featured_collection_4BkJmf",
+        "featured_collection_DDAaHk"
+      ],
+      "settings": {
+        "layout": "grid",
+        "title": "SHOP BY CATEGORY",
+        "heading_size": "h2",
+        "title_align": "center",
+        "slider_visual": "none",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "columns_desktop": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "collection_list_QYQdMq": {
       "type": "collection-list",
       "blocks": {
@@ -147,6 +279,7 @@
         "featured_collection_Mtcn7k",
         "featured_collection_3rdXy4"
       ],
+      "disabled": true,
       "settings": {
         "title": "SHOP BY CATEGORY",
         "heading_size": "h2",
@@ -164,7 +297,7 @@
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Trending Now",
+        "title": "TRENDING NOW",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
@@ -445,28 +578,6 @@
         "padding_bottom": 30
       }
     },
-    "driver_dtU4a3": {
-      "type": "driver",
-      "settings": {
-        "layout": "grid",
-        "height": 2,
-        "style": "dotted",
-        "color_scheme": "",
-        "margin_top": 40,
-        "margin_bottom": 52
-      }
-    },
-    "driver_Tq7RKb": {
-      "type": "driver",
-      "settings": {
-        "layout": "grid",
-        "height": 2,
-        "style": "dotted",
-        "color_scheme": "",
-        "margin_top": 40,
-        "margin_bottom": 52
-      }
-    },
     "collection_list_ViaMiM": {
       "type": "collection-list",
       "blocks": {
@@ -582,6 +693,8 @@
   "order": [
     "rich_text_cJxRKC",
     "slideshow_LrDNCg",
+    "multicolumn_6gHgxX",
+    "collection_carousel_CTDYJx",
     "collection_list_QYQdMq",
     "featured-collection",
     "image_banner_TyiXc6",
@@ -590,8 +703,6 @@
     "featured_collection_tab_aJFcAq",
     "image_banner_gLDxAb",
     "featured_collection_tab_G8qAXz",
-    "driver_dtU4a3",
-    "driver_Tq7RKb",
     "collection_list_ViaMiM",
     "17133378045d3bb538"
   ]

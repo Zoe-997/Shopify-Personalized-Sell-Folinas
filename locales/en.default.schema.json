@@ -683,6 +683,61 @@
         "name": "Collection list"
       }
     },
+    "collection-carousel": {
+      "name": "Collection carousel",
+      "settings": {
+        "title": {
+          "label": "Heading"
+        },
+        "image_ratio": {
+          "label": "Image ratio",
+          "options__1": {
+            "label": "Adapt to image"
+          },
+          "options__2": {
+            "label": "Portrait"
+          },
+          "options__3": {
+            "label": "Square"
+          },
+          "info": "Add images by editing your collections. [Learn more](https:\/\/help.shopify.com\/manual\/products\/collections)"
+        },
+        "columns_desktop": {
+          "label": "Number of columns on desktop"
+        },
+        "show_view_all": {
+          "label": "Enable \"View all\" button if list includes more collections than shown"
+        },
+        "header_mobile": {
+          "content": "Mobile Layout"
+        },
+        "columns_mobile": {
+          "label": "Number of columns on mobile",
+          "options__1": {
+            "label": "1 column"
+          },
+          "options__2": {
+            "label": "2 columns"
+          }
+        },
+        "swipe_on_mobile": {
+          "label": "Enable swipe on mobile"
+        }
+      },
+      "blocks": {
+        "featured_collection": {
+          "name": "Collection",
+          "settings": {
+            "collection": {
+              "label": "Collection"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Collection carousel"
+      }
+    },
     "contact-form": {
       "name": "Contact Form",
       "presets": {
@@ -917,6 +972,9 @@
         "buy_buttons": {
           "name": "Buy buttons",
           "settings": {
+            "only_show_dynamic_checkout": {
+              "label": "Only show dynamic checkout buttons"
+            },
             "show_dynamic_checkout": {
               "label": "Show dynamic checkout buttons",
               "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
@@ -2072,6 +2130,12 @@
         "buy_buttons": {
           "name": "Buy buttons",
           "settings": {
+            "only_show_dynamic_checkout": {
+              "label": "Only show dynamic checkout buttons"
+            },
+            "show_quantity": {
+              "label": "Only show dynamic checkout buttons"
+            },
             "show_dynamic_checkout": {
               "label": "Show dynamic checkout buttons",
               "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
@@ -2549,6 +2613,9 @@
           },
           "options__3": {
             "label": "Full width of column"
+          },
+          "options__4": {
+            "label": "Small size"
           }
         },
         "image_ratio": {
@@ -3074,6 +3141,9 @@
           },
           "options__3": {
             "label": "Numbers"
+          },
+          "options__4": {
+            "label": "None"
           }
         },
         "auto_rotate": {
